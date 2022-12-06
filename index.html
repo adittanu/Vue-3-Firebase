@@ -42,9 +42,10 @@
     
     <div id="app" class="space-y-3 text-slate-700">
         <!-- Attribute Binding -->
+
         <div v-if="showBooks">
             <ul>
-                <li v-for="(book, index) in books" :class="{ fav: book.isFav }" @click="toggleFav(book)">
+                <li v-for="(book, index) in filteredBooks" :class="{ fav: book.isFav }" @click="toggleFav(book)">
                     <img :src="book.img" :alt="book.title">
                     <h3>
                         {{ book.title }}
