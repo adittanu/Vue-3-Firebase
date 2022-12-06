@@ -8,6 +8,16 @@
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <style>
+        .box {
+            padding: 100px 0;
+            width: 400px;
+            text-align: center;
+            background: #ddd;
+            margin: 20px;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body class="mx-4 mt-10">
     <h1 class="text-3xl mb-3">Hello Vue :)</h1>
@@ -22,7 +32,12 @@
             <span v-else>Show Books</span>
         </button>
         
-        <div v-show="showBooks">currently showing books</div>
+        <br>
+        <div class="box" @mouseover="handleEvent($event, 5)"> Mouseover (enter) </div>
+        <div class="box" @mouseleave="handleEvent"> Mouseleave</div>
+        <div class="box" @dblclick="handleEvent"> Double click</div>
+        <div class="box" @mousemove="handleMouseMove"> position - {{x}} {{y}}</div>
+
     </div>
 
     <script src="app.js"></script>
