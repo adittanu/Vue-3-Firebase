@@ -13,8 +13,18 @@ const app = Vue.createApp({
     methods: {
         toggleShowBooks() {
             this.showBooks = !this.showBooks;
+        },
+        toggleFav(index) {
+            this.books[index].isFav = !this.books[index].isFav
         }
     },
   })
   
   app.mount('#app')
+
+
+/* 
+  Challange - Add to Favs
+  - Attach a click event to each li tag ( for each book )
+  - When a user clicks an li, toggle the 'isFav' property of that book
+*/
