@@ -14,8 +14,8 @@ const app = Vue.createApp({
         toggleShowBooks() {
             this.showBooks = !this.showBooks;
         },
-        toggleFav(index) {
-            this.books[index].isFav = !this.books[index].isFav
+        toggleFav(book) {
+            book.isFav = !book.isFav
         }
     },
   })
