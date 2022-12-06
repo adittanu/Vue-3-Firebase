@@ -1,13 +1,17 @@
 const app = Vue.createApp({
-    // Data, functions
-    // template: '<h2>Iam The Template</h2>'
     data() {
-        return {
-            title : 'The final empire',
-            author: 'Brandon Sanderson',
-            age: 29
-        }
+      return {
+        title: 'The Way of Kings',
+        author: 'Brandon Sanderson',
+        age: 45
+      }
     },
-})
-
-app.mount('#app')
+    methods: {
+      changeTitle(title) {
+        // this.title = 'Words of Radiance'
+        this.title = title
+      }
+    }
+  })
+  
+  app.mount('#app')
