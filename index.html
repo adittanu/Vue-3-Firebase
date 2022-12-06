@@ -19,17 +19,21 @@
         }
     </style>
 </head>
-<body class="mx-4 mt-10">
+<body>
     <h1 class="text-3xl mb-3">Hello Vue :)</h1>
     
     <div id="app" class="space-y-3 text-slate-700">
+        <!-- Attribute Binding -->
+        <a :href="url">The best website ever</a>
         <div v-if="showBooks">
             <ul>
                 <li v-for="book in books">
                     <h3>
                         {{ book.title }}
                     </h3>
-                    <p>{{ book.author }}</p>
+                    <p>
+                        {{ book.author }}
+                    </p>
                 </li>
             </ul>
         </div>
