@@ -24,7 +24,14 @@
     
     <div id="app" class="space-y-3 text-slate-700">
         <div v-if="showBooks">
-            <p>{{title}} - {{author}} - {{age}}</p>
+            <ul>
+                <li v-for="book in books">
+                    <h3>
+                        {{ book.title }}
+                    </h3>
+                    <p>{{ book.author }}</p>
+                </li>
+            </ul>
         </div>
 
         <button @click="toggleShowBooks">
@@ -32,12 +39,6 @@
             <span v-else>Show Books</span>
         </button>
         
-        <br>
-        <div class="box" @mouseover="handleEvent($event, 5)"> Mouseover (enter) </div>
-        <div class="box" @mouseleave="handleEvent"> Mouseleave</div>
-        <div class="box" @dblclick="handleEvent"> Double click</div>
-        <div class="box" @mousemove="handleMouseMove"> position - {{x}} {{y}}</div>
-
     </div>
 
     <script src="app.js"></script>
