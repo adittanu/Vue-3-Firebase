@@ -7,11 +7,10 @@ const app = Vue.createApp({
       }
     },
     methods: {
-      changeTitle(title) {
-        // this.title = 'Words of Radiance'
-        this.title = title
-      }
-    }
+        changeTitle(title) {
+            this.title = title
+        }
+    },
   })
   
   app.mount('#app')

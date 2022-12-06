@@ -7,16 +7,28 @@
     <title>Learning Vue</title>
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <!-- <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .button-primary {
+            background-color: rgb(74 222 128);
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            color: black;
+        }
+    </style>
 </head>
-<body>
+<body class="mx-4 mt-10">
     <h1>Hello Vue :)</h1>
     
-    <div id="app">
+    <div id="app" class="space-y-3 text-slate-700">
         <p>{{title}} - {{author}} - {{age}}</p>
-        <button v-on:click="age++">Increase age</button>
-        <button v-on:click="age--">Decrease age</button>
+        <div class="container flex space-x-3">
+            <button v-on:click="age++" class="px-3 py-2 bg-green-400 text-black rounded-md shadow-md hover:-translate-y-0.5">Increase age</button>
+            <button v-on:click="age--" class="px-3 py-2 bg-green-400 text-black rounded-md shadow-md hover:-translate-y-0.5 active:bg-green-500 active:-translate-y-0 duration-200">Decrease age</button>
+            <div class="px-3 py-2 bg-green-400 text-black rounded-md shadow-md hover:-translate-y-0.5 cursor-pointer" @click="changeTitle('Oathbringer')"> change book title</div>
+            <div class="button-primary" @click="changeTitle('Oathbringer')"> change book title</div>
+        </div>
     </div>
-
 
     <script src="app.js"></script>
 </body>
